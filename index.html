@@ -173,6 +173,7 @@
     <button class="tab" onclick="switchTab('consolidado_estabelecimento', this)"><i class="fa-solid fa-building"></i> DADOS POR ESTABELECIMENTO</button>
     <button class="tab" onclick="switchTab('agendamentos_especialidades', this)"><i class="fa-solid fa-chart-simple"></i> AGENDAMENTOS VIVVER</button>
     <button class="tab" onclick="switchTab('demanda_reprimida', this)"><i class="fa-solid fa-hourglass-half"></i> FILA DE ESPERA ATUAL</button>
+    <button class="tab" onclick="switchTab('fila_retroativa', this)"><i class="fa-solid fa-clock-rotate-left"></i> FILA RETROATIVA 2025</button>
   </div>
 
   <!-- ABA 1 -->
@@ -315,10 +316,10 @@
               <th>Hospital São José</th>
               <th>Hospital Santa Rita</th>
               <th>Total</th>
-            </tr>
+             </tr>
           </thead>
           <tbody id="tableAgendadasPorEspecEstabBody">
-            <tr><td colspan="8">Carregando...</td></tr>
+             <tr><td colspan="8">Carregando...</td></tr>
           </tbody>
         </table>
       </div>
@@ -401,16 +402,16 @@
       <div class="table-container-fisico">
         <table class="data-table-fisico" id="tabelaFisicoFinanceiro">
           <thead>
-            <tr>
+             <tr>
               <th onclick="sortTableFisico(0)" style="cursor:pointer;">Estabelecimento <i class="fa-solid fa-arrow-up-wide-short"></i></th>
               <th onclick="sortTableFisico(1)" style="cursor:pointer;">Mês <i class="fa-solid fa-arrow-up-wide-short"></i></th>
               <th class="text-right" onclick="sortTableFisico(2)" style="cursor:pointer;">Agendados <i class="fa-solid fa-arrow-up-wide-short"></i></th>
               <th class="text-right" onclick="sortTableFisico(3)" style="cursor:pointer;">Total Faturado <i class="fa-solid fa-arrow-up-wide-short"></i></th>
               <th class="text-right" onclick="sortTableFisico(4)" style="cursor:pointer;">Total Financeiro <i class="fa-solid fa-arrow-up-wide-short"></i></th>
-            </tr>
+             </tr>
           </thead>
           <tbody id="tBodyFisico">
-            <tr><td colspan="5">Carregando...</td></tr>
+             <tr><td colspan="5">Carregando...</td></tr>
           </tbody>
         </table>
       </div>
@@ -486,7 +487,7 @@
         <div class="table-wrapper">
           <table class="data-table-simple" id="tableOfertas">
             <thead>
-              <tr><th>Especialidade</th><th class="text-right">Total</th></tr>
+               <tr><th>Especialidade</th><th class="text-right">Total</th></tr>
             </thead>
             <tbody id="tableOfertasBody"><tr><td colspan="2">Carregando...</td></tr></tbody>
           </table>
@@ -498,7 +499,7 @@
         <div class="table-wrapper">
           <table class="data-table-simple" id="tableRecepcionadosVivver">
             <thead>
-              <tr><th>Especialidade</th><th class="text-right">Total</th><th style="width:40%;">% Referente à Oferta</th></tr>
+               <tr><th>Especialidade</th><th class="text-right">Total</th><th style="width:40%;">% Referente à Oferta</th></tr>
             </thead>
             <tbody id="tableRecepcionadosVivverBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
           </table>
@@ -510,7 +511,7 @@
         <div class="table-wrapper">
           <table class="data-table-simple" id="tableFaltososVivver">
             <thead>
-              <tr><th>Especialidade</th><th class="text-right">Total</th><th style="width:40%;">% Referente à Oferta</th></tr>
+               <tr><th>Especialidade</th><th class="text-right">Total</th><th style="width:40%;">% Referente à Oferta</th></tr>
             </thead>
             <tbody id="tableFaltososVivverBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
           </table>
@@ -519,7 +520,7 @@
     </div>
   </section>
 
-  <!-- ABA FILA DE ESPERA -->
+  <!-- ABA FILA DE ESPERA ATUAL -->
   <section id="tab-demanda_reprimida" class="tabContent">
     <div class="topic-header">
       <div class="topic-header-icon"><i class="fa-solid fa-hourglass-half"></i></div>
@@ -539,7 +540,7 @@
         <div class="table-wrapper" style="max-height: 400px;">
           <table class="data-table-simple" id="tableFilaEspecialidade">
             <thead>
-              <tr><th>Especialidade</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
+               <tr><th>Especialidade</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
             </thead>
             <tbody id="tableFilaEspecialidadeBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
           </table>
@@ -551,7 +552,7 @@
         <div class="table-wrapper" style="max-height: 400px;">
           <table class="data-table-simple" id="tableFilaProcedimento">
             <thead>
-              <tr><th>Procedimento</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
+               <tr><th>Procedimento</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
             </thead>
             <tbody id="tableFilaProcedimentoBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
           </table>
@@ -565,7 +566,7 @@
         <div class="table-wrapper" style="max-height: 400px;">
           <table class="data-table-simple" id="tableFilaComplexidade">
             <thead>
-              <tr><th>Complexidade</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
+               <tr><th>Complexidade</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
             </thead>
             <tbody id="tableFilaComplexidadeBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
           </table>
@@ -577,7 +578,7 @@
         <div class="table-wrapper" style="max-height: 400px;">
           <table class="data-table-simple" id="tableFilaSubgrupo">
             <thead>
-              <tr><th>Subgrupo</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
+               <tr><th>Subgrupo</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
             </thead>
             <tbody id="tableFilaSubgrupoBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
           </table>
@@ -600,6 +601,122 @@
           <div class="chartSub">Projeção com base na evolução observada</div>
         </div>
         <div class="chartWrap"><canvas id="cTendenciaFila"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVA ABA: FILA RETROATIVA 2025 -->
+  <section id="tab-fila_retroativa" class="tabContent">
+    <div class="topic-header" style="background: linear-gradient(135deg, #0b5e42 0%, #0a4a35 55%, #083c2d 100%);">
+      <div class="topic-header-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      <div>
+        <h3>Fila de Espera Retroativa 2025</h3>
+        <div class="topic-sub">Demanda reprimida retroativa referente ao ano de 2025, com data de corte baseada na última atualização da planilha.</div>
+      </div>
+      <div class="topic-pill">
+        <i class="fa-solid fa-calendar-week"></i>
+        Base: set/25
+      </div>
+    </div>
+
+<!-- KPIs específicos da fila retroativa -->
+<div class="kpis" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+  <div class="kpi" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 55%, #020617 100%); color: white; border: none;">
+    <div class="kpiIcon" style="background: rgba(255,255,255,0.2);"><i class="fa-solid fa-hourglass-half"></i></div>
+    <div>
+      <div class="label" style="color: rgba(255,255,255,0.8);">TOTAL FILA RETROATIVA 2025</div>
+      <div class="val" id="kFilaRetroativaTotal">0</div>
+      <div class="sub" id="kFilaRetroativaDataCorte" style="color: rgba(255,255,255,0.7);">Data de corte: --</div>
+    </div>
+  </div>
+  <div class="kpi" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 55%, #020617 100%); color: white; border: none;">
+    <div class="kpiIcon" style="background: rgba(255,255,255,0.2);"><i class="fa-solid fa-chart-simple"></i></div>
+    <div>
+      <div class="label" style="color: rgba(255,255,255,0.8);">MÉDIA POR PROCEDIMENTO</div>
+      <div class="val" id="kFilaRetroativaMedia">0</div>
+      <div class="sub" style="color: rgba(255,255,255,0.7);">Demanda por procedimento</div>
+    </div>
+  </div>
+</div>
+
+    <!-- Gráficos e Tabelas de Resumo -->
+    <div class="row2eq" style="margin-bottom: 24px;">
+      <!-- Gráfico de Rosca: Complexidade -->
+      <div class="chartCard">
+        <div class="chartHead">
+          <h3><i class="fa-solid fa-chart-pie"></i> Fila Retroativa por Complexidade</h3>
+          <div class="chartSub">Distribuição por nível de complexidade SIGTAP</div>
+        </div>
+        <div class="chartWrap" style="height: 300px;"><canvas id="cFilaRetroativaComplexidade"></canvas></div>
+      </div>
+
+      <!-- Gráfico de Rosca: Subgrupo -->
+      <div class="chartCard">
+        <div class="chartHead">
+          <h3><i class="fa-solid fa-diagram-project"></i> Fila Retroativa por Subgrupo</h3>
+          <div class="chartSub">Distribuição por subgrupo SIGTAP</div>
+        </div>
+        <div class="chartWrap" style="height: 300px;"><canvas id="cFilaRetroativaSubgrupo"></canvas></div>
+      </div>
+    </div>
+
+    <div class="row2eq" style="margin-bottom: 24px;">
+      <!-- Tabela: Top Especialidades -->
+      <div class="chartCard">
+        <div class="table-title"><i class="fa-solid fa-chart-simple" style="color: var(--secondary);"></i> Top Especialidades - Fila Retroativa</div>
+        <div class="table-wrapper" style="max-height: 300px;">
+          <table class="data-table-simple" id="tableRetroativaEspecialidade">
+            <thead>
+               <tr><th>Especialidade</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
+            </thead>
+            <tbody id="tableRetroativaEspecialidadeBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tabela: Top Procedimentos -->
+      <div class="chartCard">
+        <div class="table-title"><i class="fa-solid fa-chart-simple" style="color: var(--primary);"></i> Top Procedimentos - Fila Retroativa</div>
+        <div class="table-wrapper" style="max-height: 300px;">
+          <table class="data-table-simple" id="tableRetroativaProcedimento">
+            <thead>
+               <tr><th>Procedimento</th><th class="text-right">Total na Fila</th><th style="width:40%;">% do Total</th></tr>
+            </thead>
+            <tbody id="tableRetroativaProcedimentoBody"><tr><td colspan="3">Carregando...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabela Detalhada Completa -->
+    <div class="estatistica-card">
+      <div class="estatistica-title">
+        <div>
+          <i class="fa-solid fa-table-list" style="color: var(--primary);"></i>
+          Detalhamento Completo da Fila Retroativa 2025
+        </div>
+        <div class="table-controls">
+          <input type="text" id="tabelaRetroativaSearch" placeholder="🔍 Buscar especialidade ou procedimento..." style="width: 280px;">
+        </div>
+      </div>
+      <div class="estabelecimento-table-wrapper" style="max-height: 450px;">
+        <table class="estabelecimento-table" id="tableRetroativaDetalhada">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Especialidade</th>
+              <th>Procedimento</th>
+              <th>Grupo</th>
+              <th>Subgrupo</th>
+              <th>Complexidade</th>
+              <th class="text-right">Total</th>
+              <th>Data Corte</th>
+            </tr>
+          </thead>
+          <tbody id="tableRetroativaDetalhadaBody">
+            <tr><td colspan="8">Carregando...</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
